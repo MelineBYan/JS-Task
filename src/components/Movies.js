@@ -21,6 +21,7 @@ const Movies = () => {
           ADD MOVIES
         </button>
       </div>
+      <div className="content">Your personal movie database</div>
       <div className={visible ? "open" : "addMovie"}>
         <form className="form">
           <label>Movie Title</label>

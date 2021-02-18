@@ -54,6 +54,7 @@
   height: 300px;
   left: 750px;
   top: 200px;
+  border-radius: 10%;
 }
 
 .input {
@@ -65,4 +66,19 @@
 
 .form {
   display: block;
+}
+
+.content {
+  position: fixed;
+  left: 650px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+  width: 700px;
+  line-height: 150px;
+  height: 150px;
+  border: 1px solid rgb(194, 181, 181);
+  box-shadow: 2px 2px rgb(117, 113, 113);
+  border-bottom-left-radius: 8%;
+  border-bottom-right-radius: 8%;
 }
