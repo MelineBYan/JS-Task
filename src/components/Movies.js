@@ -14,14 +14,14 @@ const Movies = () => {
     });
   };
   return (
-    <div>
+    <div className={visible ? "body" : ""}>
       <div className="navbar">
         <div className="heading">Favorite movies</div>
         <button className="btn" onClick={handleClick}>
           ADD MOVIES
         </button>
       </div>
-      <div className="content">Your personal movie database</div>
+      <div className="content">Your personal movie database!</div>
       <div className={visible ? "open" : "addMovie"}>
         <form className="form">
           <label>Movie Title</label>
@@ -30,10 +30,15 @@ const Movies = () => {
           <input type="text" name="url" className="input" />
           <label>Your Rating</label>
           <input type="number" name="rate" className="input" />
-          <button name="cancel" onClick={handleCancel}>
-            Cancel
-          </button>
-          <button name="submit">Add</button>
+          <div className="btns">
+            {" "}
+            <button name="cancel" className="cancel" onClick={handleCancel}>
+              Cancel
+            </button>
+            <button name="submit" className="add">
+              Add
+            </button>
+          </div>
         </form>
       </div>
     </div>
