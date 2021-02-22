@@ -13,6 +13,11 @@ const Movies = () => {
       visible: false,
     });
   };
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    console.log(e.tartget);
+  };
   return (
     <div className={visible ? "body" : ""}>
       <div className="navbar">
@@ -25,13 +30,27 @@ const Movies = () => {
       <div className={visible ? "open" : "addMovie"}>
         <form className="form">
           <label>Movie Title</label>
-          <input type="text" name="name" className="input" />
+          <input
+            type="text"
+            name="name"
+            className="input"
+            onChange={handleChange}
+          />
           <label>Image URL</label>
-          <input type="text" name="url" className="input" />
+          <input
+            type="text"
+            name="url"
+            className="input"
+            onChange={handleChange}
+          />
           <label>Your Rating</label>
-          <input type="number" name="rate" className="input" />
+          <input
+            type="number"
+            name="rate"
+            className="input"
+            onChange={handleChange}
+          />
           <div className="btns">
-            {" "}
             <button name="cancel" className="cancel" onClick={handleCancel}>
               Cancel
             </button>
