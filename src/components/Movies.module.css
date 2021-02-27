@@ -35,7 +35,7 @@
 }
 
 .addMovieVisible {
-  position: fixed;
+  position: relative;
   display: block;
   padding: 10px;
   width: 700px;
@@ -49,7 +49,7 @@
   animation: fade-slide-in 0.3s ease-out forwards;
 }
 
-.input {
+.formInput {
   display: block;
   margin: 5px;
   width: 680px;
@@ -116,7 +116,7 @@ button:focus {
 }
 
 .confirmDeleteVisible {
-  position: fixed;
+  position: relative;
   text-align: center;
   display: block;
   width: 700px;
@@ -161,15 +161,42 @@ button:focus {
 }
 
 .movie {
-  width: 700px;
+  width: 500px;
   display: flex;
-  background-color: chocolate;
-  border-radius: 5%;
+  background-color: rgb(248, 234, 225);
+  border-radius: 15px;
   border: 0.1px solid rgb(204, 201, 201);
   box-shadow: 0.5px 4px 6px rgb(182, 179, 179);
-  line-height: 150px;
+  /* line-height: 150px; */
   height: 150px;
-  text-align: center;
+  justify-content: space-between;
+  align-items: stretch;
   font-size: 25px;
   font-weight: 500;
+}
+.movieImage {
+  border-radius: inherit;
+}
+
+.movieRate {
+  background-color: chocolate;
+  border-radius: 10px;
+  width: 100px;
+  height: 30px;
+  align-self: flex-end;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .addMovieVisible {
+    width: 700px;
+    left: calc(50% - 20rem);
+  }
+}
+@keyframes fade-slide-in {
+  from {
+    transform: translateY(-5rem);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
